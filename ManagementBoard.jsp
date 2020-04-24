@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +12,14 @@
             }
             
             function boarddelete(){
+                if(confirm("정말 삭제하시겠습니까?")){
+                    location.href="http://naver.com";
+                }else{
+                    alert("아니오를 누르셨습니다");
+                    return False;
+                }
+            }
+            function boarddelete2(){
                 if(confirm("정말 삭제하시겠습니까?")){
                     location.href="http://naver.com";
                 }else{
@@ -31,6 +41,14 @@
         <tr>
             <td><input type="submit" value="삭제하기" onclick="boarddelete();"></td>
         </tr>
+    </table>
+    <table>
+    	<tr>
+    			<td>유저 닉네임을 입력하세요 : <input type='text' id='familysarch'></td>
+    	</tr>
+    	<tr>
+ 			   	<td><input type="submit" value="삭제하기" onclick="boarddelete2();"></td>
+    	</tr>
     </table>
 
 </body>
